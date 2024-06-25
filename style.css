@@ -4,8 +4,12 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+/* vh refers to viewport height , so 50vh represent 50% of the viewport height means cover half of the entire screen height */
+/* vw refers to viewport width , so 50vw represent 50% of the viewport width means cover half of the entire screen width */
+
+/* in the chrome when we hovering element then we see parameters like as 1260X670 in this first is width and second is height means 1260 is width and 670 is height   */
 .container{
-    width:100%;
+    width:100vw;
     min-height: 100vh;
     background: linear-gradient(135deg , #4203a9, #90bafc);
     color:#fff;
@@ -13,7 +17,7 @@
 }
 .calculator{
     width:100%;
-    max-width:600px;
+    max-width:70%;
     margin-left: 10%;
     margin-top: 10%;
 }
@@ -33,8 +37,9 @@
 }
 .input-box input{
     flex:1;
-    margin-right: 20px;
-    padding: 14px 20px;
+    width:100%;
+    margin-right: 10%;
+    padding: 3% 2%;
     border:0;
     outline:0;
     font-size:18px;
@@ -45,11 +50,12 @@
     background: #ffff76;
     border:0;
     outline:0;
-    padding: 15px 30px;
-    border-radius: 5px;
+    padding: 3% 2% ;
+    border-radius: 8%;
     font-weight: 500;
     color:#333;
     cursor:pointer;
+    font-size:18px;
 }
 .input-box input::-webkit-calendar-picker-indicator{
     top:0;
@@ -63,8 +69,23 @@
     /* background-position: calc(100% -10px );  comment- if i right above line like this then output will be surprising */
 }
 #result{
+    display:block;
     font-size: 20px;
 }
 #result span{
     color:#ffff76;
+}
+
+@media  (max-width:650px){
+    .input-box {
+        display:block;
+    }
+    button{
+        margin-top:20px;
+        margin-right:20%;
+        margin-left:20%;
+        width:60%;
+        border-radius:5px;
+    }
+    
 }
